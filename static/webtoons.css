@@ -1,0 +1,67 @@
+.index {
+  position: fixed;
+  top: 40vh;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.index>a {
+  background: #222;
+  color: #f2f2f2;
+  font-size: 1rem;
+  padding: 6px 8px 6px 3px;
+  transition: 0.2s;
+}
+.index>a:first-child {
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid #f2f2f2;
+  transform-origin: bottom right;
+}
+.index>a:last-child {
+  border-radius: 0 0 6px 6px;
+  transform-origin: top right;
+}
+.index>a:hover {
+  transform: scale(1.04);
+}
+.webtoon-title {
+  margin-top: 2vh;
+}
+.webtoon-table {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1vh;
+}
+.webtoon {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.webtoon>.inner {
+  width: 95%;
+  display: flex;
+  padding: 8px;
+  transition: 0.2s;
+}
+.webtoon>.inner:hover {
+  transform: scale(1.05);
+}
+.webtoon>.inner>img {
+  border-radius: 5px;
+}
+.webtoon .desc {
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.webtoon .desc>.order>span {
+  background: tomato;
+  padding: 0 4px;
+  border-radius: 3px;
+  color: white;
+  font-size: 0.8rem;
+}

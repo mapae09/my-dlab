@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% include 'head.html' %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='webtoons.css') }}">
+    <title>Webtoons</title>
+</head>
+<body>
+    {% include 'navigation.html' %}
+    <div class="index">
+    <a href="#top"><< 도전베스트 조회순</a>
+    <a href="#별점순"><< 도전베스트 별점순</a>
+  </div>
+    <div class="container">
+        <section>
+          <h1 class="webtoon-title">네이버 도전베스트 웹툰 조회순</h1>
+          <div class="webtoon-table">
+          {% for img, name, score in views %}
+            <div class="webtoon">
+              <div class="inner">
+                <img src="{{ img }}">
+                <div class="desc">
+                  <div class="order">
+                    <span>순위</span> {{ loop.index }}
+                  </div>
+                  <div>
+                    {{ name }}
+                  </div>
+                  <div>
+                    {{ score }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+        </section>
+
+    <!-- 도전베스트 별점순 -->
+        <section>
+          <div class="top-blank" id="별점순"></div>
+          <h1 class="webtoon-title">네이버 도전베스트 웹툰 별점순</h1>
+          <div class="webtoon-table">
+          {% for img, name, score in stars %}
+            <div class="webtoon">
+              <div class="inner">
+                <img src="{{ img }}">
+                <div class="desc">
+                  <div class="order">
+                    <span>순위</span> {{ loop.index }}
+                  </div>
+                  <div>
+                    {{ name }}
+                  </div>
+                  <div>
+                    {{ score }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+        </section>
+    </div>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% include 'head.html' %}
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'typing.css')}}">
+    <script defer src="{{ url_for('static', filename='typing.js')}}"></script>
+    <title>My home</title>
+</head>
+<body>
+    {% include 'navigation.html' %}
+
+    <div class="container">
+        <section id="typing-area">
+          <h1 id="typing-text"></h1>
+        </section>
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+</html>

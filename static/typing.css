@@ -1,0 +1,24 @@
+#typing-text {
+  display: table-cell;
+  vertical-align: middle;
+  border-right: 0.05em solid #161616;
+  animation: cursor 0.5s ease infinite;
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+#typing-area {
+  height: 82vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#typing-text {
+  font-family: 'Rajdhani', sans-serif;
+  color: #222; /* 타이핑 글자색 변경 */
+  font-size: 6rem; /* 타이핑 글자 크기 변경 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+}

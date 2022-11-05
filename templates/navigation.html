@@ -1,0 +1,15 @@
+<nav>
+    <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/webtoons">WEBTOONS</a></li>
+        <li><a href="/weather">WEATHER</a></li>
+    </ul>
+</nav>
+<div class="top-blank" id="top"></div>
+
+{% if 'webtoons' in request.path %}
+  <a class="to-top" href="#top">
+      <!-- box icon 사용 -->
+     <div><i class='bx bxs-to-top'></i></div>
+  </a>
+{% endif %}

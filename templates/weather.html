@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% include 'head.html' %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='weather.css') }}">
+    <title>Weather</title>
+</head>
+<body>
+    {% include 'navigation.html' %}
+
+    <div class="container">
+        <section id="weather-info">
+        {% if info is mapping %}
+            <h1 class="local">대구광역시 남구, 중구, 수성구</h1>
+            <div class="contents">
+                <!-- 온도 -->
+                <div class="info">
+
+                    <span class="title">온도</span>
+                    <div class="value">
+                        {{ info['온도'] }} ℃
+                    </div>
+                </div>
+                <div class="info">
+
+                    <span class="title">습도</span>
+                    <div class="value">
+                        {{ info['습도'] }} %
+                    </div>
+                </div>
+                <div class="info">
+
+                    <span class="title">강수 형태</span>
+                    <div class="value">
+                        {{ info['강수형태'] }}
+                    </div>
+                </div>
+                <div class="info">
+
+                    <span class="title">1시간 강수량</span>
+                    <div class="value">
+                        {{ info['1시간 강수량'] }} mm
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <h2>{{ info }}</h2>
+        {% endif %}
+        </section>
+
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+</html>
